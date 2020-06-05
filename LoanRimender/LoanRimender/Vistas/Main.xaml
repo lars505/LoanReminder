@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="LoanRimender.Vistas.Main" Title="Loan Rimender">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Icon="clave" Clicked="Addnewuser">
+
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content >
+
+        <Grid RowSpacing=" 10" ColumnSpacing="20" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#F5F5F5" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="*"/>
+
+            </Grid.RowDefinitions>
+
+
+            <StackLayout x:Name="Label" Grid.Row="0"  BackgroundColor="#F5F5F5">
+
+
+
+            </StackLayout>
+
+            <StackLayout Grid.Row="1" BackgroundColor="#F5F5F5" VerticalOptions="FillAndExpand" HorizontalOptions="CenterAndExpand">
+                <Grid ColumnSpacing="25" RowSpacing="25">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="152"  />
+                        <RowDefinition Height="152"/>
+                        <RowDefinition Height="152"/>
+
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="152"/>
+                        <ColumnDefinition Width="152"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Frame CornerRadius="25" Grid.Row="0" Grid.Column="0" >
+
+                        <StackLayout x:Name="Nuevo" >
+
+                            <Image Source="agregar"   HeightRequest="75" WidthRequest="75" AbsoluteLayout.LayoutBounds=".5,.5,.5,.5"
+                                   AbsoluteLayout.LayoutFlags="All">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="Addnewuser"/>
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <Label Text="Nuevo" TextColor="#5579C7"                                  
+                                   FontAttributes="Bold"
+                                   FontSize="15"  VerticalOptions="CenterAndExpand" HorizontalOptions="Center"></Label>
+
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame CornerRadius="25" HasShadow="True" Grid.Row="0" Grid.Column="1" >
+                        <StackLayout x:Name="Clientes">
+                            <Image Source="ListasU"   HeightRequest="75" WidthRequest="75" AbsoluteLayout.LayoutBounds=".5,.5,.5,.5"
+                                   AbsoluteLayout.LayoutFlags="All">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ClientesList"/>
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <Label Text="Clientes" TextColor="#5579C7"                                  
+                                   FontAttributes="Bold"
+                                   FontSize="15"  VerticalOptions="CenterAndExpand" HorizontalOptions="Center"></Label>
+
+                        </StackLayout>
+                    </Frame>
+
+
+                    <Frame CornerRadius="25" HasShadow="True" Grid.Row="1" Grid.Column="0" >
+                        <StackLayout x:Name="Prestamos"   >
+                            <Image Source="prestamo"   HeightRequest="75" WidthRequest="75" AbsoluteLayout.LayoutBounds=".5,.5,.5,.5"
+                                   AbsoluteLayout.LayoutFlags="All">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="Addnewuser"/>
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <Label Text="Prestamo" TextColor="#5579C7"                                  
+                                   FontAttributes="Bold"
+                                   FontSize="15"  VerticalOptions="CenterAndExpand" HorizontalOptions="Center"></Label>
+                        </StackLayout>
+                    </Frame>
+
+
+                    <Frame CornerRadius="25" HasShadow="True"  Grid.Row="1" Grid.Column="1">
+                        <StackLayout x:Name="Creditos" >
+                            <Image Source="creditos"   HeightRequest="75" WidthRequest="75" AbsoluteLayout.LayoutBounds=".5,.5,.5,.5"
+                                   AbsoluteLayout.LayoutFlags="All">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="Addnewuser"/>
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <Label Text="Creditos" TextColor="#5579C7"                                  
+                                   FontAttributes="Bold"
+                                   FontSize="15"  VerticalOptions="CenterAndExpand" HorizontalOptions="Center"></Label>
+
+                        </StackLayout>
+                    </Frame>
+
+
+                    <Frame CornerRadius="25" HasShadow="True"  Grid.Row="2" Grid.Column="0">
+                        <StackLayout x:Name="Pagos"   >
+                            <Image Source="Pago"   HeightRequest="75" WidthRequest="75" AbsoluteLayout.LayoutBounds=".5,.5,.5,.5"
+                                   AbsoluteLayout.LayoutFlags="All">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="Addnewuser"/>
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <Label Text="Pagos" TextColor="#5579C7"                                  
+                                   FontAttributes="Bold"
+                                   FontSize="15"  VerticalOptions="CenterAndExpand" HorizontalOptions="Center"></Label>
+                        </StackLayout>
+                    </Frame>
+
+
+                    <Frame CornerRadius="25" HasShadow="True" Grid.Row="2" Grid.Column="1">
+                        <StackLayout x:Name="Calcular"    >
+                            <Image Source="calcular"   HeightRequest="75" WidthRequest="75" AbsoluteLayout.LayoutBounds=".5,.5,.5,.5"
+                                   AbsoluteLayout.LayoutFlags="All">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="Addnewuser"/>
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <Label Text="Calcular" TextColor="#5579C7"                                  
+                                   FontAttributes="Bold"
+                                   FontSize="15"  VerticalOptions="CenterAndExpand" HorizontalOptions="Center"></Label>
+
+                        </StackLayout>
+                    </Frame>
+
+
+                </Grid>
+            </StackLayout>
+
+
+
+
+
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>

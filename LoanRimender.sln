@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30104.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoanRimender.Android", "LoanRimender\LoanRimender.Android\LoanRimender.Android.csproj", "{0987676C-0EEF-4F24-884E-C5DA6DECE28D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoanRimender", "LoanRimender\LoanRimender\LoanRimender.csproj", "{2CAEC716-BCA7-4090-93A3-DCBC47A476B1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0987676C-0EEF-4F24-884E-C5DA6DECE28D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0987676C-0EEF-4F24-884E-C5DA6DECE28D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0987676C-0EEF-4F24-884E-C5DA6DECE28D}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{0987676C-0EEF-4F24-884E-C5DA6DECE28D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0987676C-0EEF-4F24-884E-C5DA6DECE28D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0987676C-0EEF-4F24-884E-C5DA6DECE28D}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{2CAEC716-BCA7-4090-93A3-DCBC47A476B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CAEC716-BCA7-4090-93A3-DCBC47A476B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CAEC716-BCA7-4090-93A3-DCBC47A476B1}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{2CAEC716-BCA7-4090-93A3-DCBC47A476B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CAEC716-BCA7-4090-93A3-DCBC47A476B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CAEC716-BCA7-4090-93A3-DCBC47A476B1}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FEAB8407-F417-4051-8BBE-27B97EACC50C}
+	EndGlobalSection
+EndGlobal

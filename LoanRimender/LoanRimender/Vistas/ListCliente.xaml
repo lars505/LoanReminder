@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LoanRimender.ListCliente"
+             Title="Clientas" x:Name="fondo">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="+"
+                     Clicked="OnNoteAddedClicked" />
+    </ContentPage.ToolbarItems>
+
+    <ListView  x:Name="listView"
+          HasUnevenRows="true" BackgroundColor="#F5F5F5" ItemSelected="OnListViewItemSelected">
+        <ListView.ItemTemplate >
+            <DataTemplate >
+                <ViewCell >
+                    <Grid Padding="5" BackgroundColor="Transparent" >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="120" />
+
+                        </Grid.RowDefinitions>
+
+                        <Frame BackgroundColor="White" CornerRadius="15" Grid.Row="0" Grid.ColumnSpan="1" >
+                            <StackLayout>
+                                <Grid>
+
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition />
+                                        <RowDefinition />
+                                    </Grid.RowDefinitions>
+
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="200" />
+                                        <ColumnDefinition Width="0" />
+                                    </Grid.ColumnDefinitions>
+                                    <Label Grid.Column="0" BackgroundColor="Transparent" Text="{Binding Nombre}" FontAttributes="Bold" HorizontalOptions="Fill" FontSize="15" />
+                                    <Label Grid.Row="1" Grid.Column="0" Text="{Binding Cedula}" VerticalOptions="End" />
+                                    <Label Text="Monto" Grid.Row="0" Grid.Column="2" HorizontalTextAlignment="End" BackgroundColor="Transparent"/>
+                                    <Label Text="{Binding Direccion}" Grid.Row="2" Grid.Column="0"/>
+                                    <Label Text=" C$5000" Grid.Row="1" Grid.Column="2" HorizontalTextAlignment="End"/>
+                                </Grid>
+
+                            </StackLayout>
+
+                        </Frame>
+
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+
+
+</ContentPage>
