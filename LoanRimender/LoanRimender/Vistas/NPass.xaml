@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="LoanRimender.Vistas.NPass">
+    
+    <Frame  VerticalOptions="CenterAndExpand" HorizontalOptions="Center" HeightRequest="350" WidthRequest="300" CornerRadius="15">
+        <StackLayout>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                   
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <StackLayout Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HeightRequest="5"  >
+                    <Label Text="Contraseña" HorizontalOptions="Center" FontAttributes="Bold" x:Name="message" />
+                </StackLayout>
+                
+                <StackLayout Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" >
+                    <Label Text=" Ingrese Contraseña:" />
+                    <Entry Placeholder=""  IsPassword="True" Keyboard="Url" Text="{Binding Pass}" x:Name="Pass"/>
+                    <Label Text="Confirmar Contraseña"/>
+                    <Entry Placeholder=""   IsPassword="True" Keyboard="Url" Text="{Binding CPass}" x:Name="CPass" ></Entry>
+                    
+
+                </StackLayout>
+
+                <StackLayout Grid.Row="2" Grid.Column="0">
+                    <Button  Text="Guardar" VerticalOptions="EndAndExpand" CornerRadius="5" BackgroundColor="#A9B2EC" TextColor="White" Clicked="Savepass" />
+                </StackLayout>
+
+
+                <StackLayout Grid.Row="2" Grid.Column="1">
+                    <Button  Text="Cancelar" VerticalOptions="EndAndExpand" CornerRadius="5" BackgroundColor="#A9B2EC" TextColor="White"/>
+                </StackLayout>
+
+            </Grid>
+        </StackLayout>
+    </Frame>
+</ContentPage>

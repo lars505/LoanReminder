@@ -12,4 +12,11 @@ namespace LoanRimender.Models
         public int Celular { get; set; }
         public string Direccion { get; set; }
     }
+
+    public class Segurity
+    {
+        public int Pass { get; set; }
+    }
+
+
 }

@@ -27,5 +27,12 @@ namespace LoanRimender.Vistas
         {
             Navigation.PushAsync(new ListCliente());
         }
+
+       
+
+        private void NPassword(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new NPass());
+        }
     }
 }

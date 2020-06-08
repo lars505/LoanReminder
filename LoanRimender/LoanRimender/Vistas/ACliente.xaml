@@ -20,8 +20,7 @@
             <Frame Grid.Row="1" BackgroundColor="#F5F5F5" >
 
                 <Frame CornerRadius="25">
-                    <ScrollView AbsoluteLayout.LayoutBounds="0,0,1,1"
-            AbsoluteLayout.LayoutFlags="All" Grid.Row="1">
+                    <ScrollView AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All" Grid.Row="1">
                         <StackLayout>
                             <Label Text="Nombre:" />
                             <Entry Placeholder="Nombre completo" Keyboard="Chat" Text="{Binding Nombre}"/>

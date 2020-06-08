@@ -1,8 +1,8 @@
-﻿using System;
+﻿using LoanRimender.Data;
+using LoanRimender.Vistas;
+using System;
 using System.IO;
 using Xamarin.Forms;
-using LoanRimender.Data;
-using LoanRimender.Models;
 
 namespace LoanRimender
 {
@@ -26,6 +26,7 @@ namespace LoanRimender
         {
             InitializeComponent();
             MainPage = new NavigationPage(new LoanRimender.Vistas.Main());
+           //MainPage = new NavigationPage(new NPass());
         }
 
         protected override void OnStart()

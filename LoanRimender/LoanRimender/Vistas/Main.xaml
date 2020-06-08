@@ -6,7 +6,7 @@
              mc:Ignorable="d"
              x:Class="LoanRimender.Vistas.Main" Title="Loan Rimender">
     <ContentPage.ToolbarItems>
-        <ToolbarItem Icon="clave" Clicked="Addnewuser">
+        <ToolbarItem Icon="clave" Clicked="NPassword">
 
         </ToolbarItem>
     </ContentPage.ToolbarItems>
