@@ -11,6 +11,14 @@ namespace LoanRimender.Models
         public String Cedula { get; set; }
         public int Celular { get; set; }
         public string Direccion { get; set; }
+
+
+        public DateTime FechaI { get; set; }
+        public DateTime FechaF { get; set; }
+
+        public int MontoI { get; set; }
+        public int MontoF { get; set; }
+        public bool debe { get; set; }
     }
 
     public class Segurity

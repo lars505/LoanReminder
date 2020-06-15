@@ -34,6 +34,8 @@
                             </Entry>
                             <Label Text="Direccion"/>
                             <Entry Placeholder="Dirección" Text="{Binding Direccion}"/>
+                           
+                         
                             <Button Text="Guardar" VerticalOptions="EndAndExpand" CornerRadius="5" BackgroundColor="#A9B2EC" TextColor="White" Clicked="OnSaveButtonClicked"/>
                         </StackLayout>
                     </ScrollView>

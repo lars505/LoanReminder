@@ -15,9 +15,9 @@ namespace LoanRimender
 
         async void OnSaveButtonClicked(object sender, EventArgs e)
         {
-            var note = (Rimender)BindingContext;
+            var cliente = (Rimender)BindingContext;
             
-            await App.Database.SaveClienteAsync(note);
+            await App.Database.SaveClienteAsync(cliente);
             await Navigation.PopAsync();
         }
 

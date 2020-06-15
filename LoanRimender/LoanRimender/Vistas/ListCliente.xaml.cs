@@ -56,6 +56,14 @@ namespace LoanRimender
             //    BindingContext = e.SelectedItem as Note
             //});
 
+
+            //Probando
+
+
+
         }
+
+       
+       
     }
 }

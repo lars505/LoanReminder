@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using SQLite;
 using LoanRimender.Models;
+using System.Linq.Expressions;
 
 namespace LoanRimender.Data
 {
@@ -18,14 +19,28 @@ namespace LoanRimender.Data
         public Task<List<Rimender>> GetClientesAsync()
         {
             return _database.Table<Rimender>().ToListAsync();
+           
         }
 
-        public Task<Rimender> GetClientesAsync(int id)
+
+
+        //metodo para cargar lista de clientes que no tienen prestamo.
+        public Task<List<Rimender>> GetListNewLoan()
+        {
+            return _database.QueryAsync<Rimender>("select * from Rimender where debe = false AND MontoF = 0");
+        }
+        public  Task<Rimender> GetNoteAsync(int id)
         {
             return _database.Table<Rimender>()
                             .Where(i => i.ID == id)
                             .FirstOrDefaultAsync();
+
+
         }
+
+
+      
+
 
         public Task<int> SaveClienteAsync(Rimender note)
         {

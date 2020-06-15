@@ -78,7 +78,7 @@
                             <Image Source="prestamo"   HeightRequest="75" WidthRequest="75" AbsoluteLayout.LayoutBounds=".5,.5,.5,.5"
                                    AbsoluteLayout.LayoutFlags="All">
                                 <Image.GestureRecognizers>
-                                    <TapGestureRecognizer Tapped="Addnewuser"/>
+                                    <TapGestureRecognizer Tapped="Addprestamos"/>
                                 </Image.GestureRecognizers>
                             </Image>
                             <Label Text="Prestamo" TextColor="#5579C7"                                  

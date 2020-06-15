@@ -25,8 +25,8 @@ namespace LoanRimender
         public App()
         {
             InitializeComponent();
-            MainPage = new NavigationPage(new LoanRimender.Vistas.Main());
-           //MainPage = new NavigationPage(new NPass());
+           MainPage = new NavigationPage(new LoanRimender.Vistas.Main());
+           //MainPage = new NavigationPage(new RPrestamo());
         }
 
         protected override void OnStart()

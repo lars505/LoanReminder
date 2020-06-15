@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="LoanRimender.Vistas.RPrestamo">
+    <ContentPage.Content>
+        <Frame>
+            <Grid>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <Label Text="Nombre del Cliente" Grid.Row ="0" HorizontalOptions="CenterAndExpand" FontAttributes="Bold" FontSize="10" HorizontalTextAlignment="Center" />
+                <Label Text="{Binding Nombre}" Grid.Row ="1" HorizontalOptions="CenterAndExpand" FontAttributes="Bold" HorizontalTextAlignment="Center" />
+                <Label Text="Cedula" Grid.Row ="2" HorizontalOptions ="CenterAndExpand" FontAttributes="Bold" FontSize="10" HorizontalTextAlignment="Center"/>
+                <Label Text="{Binding Cedula}" Grid.Row ="3" HorizontalOptions ="CenterAndExpand" FontAttributes="Bold" HorizontalTextAlignment="Center" />
+                <Label x:Name="fechap" Text="Fecha Prestamo" Grid.Row="4" HorizontalOptions="Center" FontAttributes="Bold" FontSize="10" HorizontalTextAlignment="Center" />
+                <StackLayout Grid.Row="5" HeightRequest="50">
+                    <DatePicker x:Name="startDatePicker"  Format="dddd, dd MMMM yyyy" Margin="10, 0, 0, 30" DateSelected="OnDateSelected" FontSize="15" HorizontalOptions="Center" BackgroundColor="AliceBlue"/>
+                </StackLayout>
+                <Label x:Name="fechaf" Text="Fecha FinalizaciónPrestamo" Grid.Row="6" HorizontalOptions="Center" FontAttributes="Bold" FontSize="10" />
+                <StackLayout  Grid.Row="7" HeightRequest="50">
+                    <DatePicker x:Name="endDatePicker" Format="dddd, dd MMMM yyyy" Margin="10, 0, 0, 30" IsEnabled="False" FontSize="15" HorizontalOptions="Center" />    
+                </StackLayout>
+                
+
+                <Label Text="Monto a Prestar" Grid.Row="8" HorizontalOptions="Center" HorizontalTextAlignment="Center"/>
+                <Entry Placeholder="$" Grid.Row="9" Keyboard="Numeric" TextChanged="Monto" x:Name="MontoI" Text="{Binding MontoF}" HorizontalTextAlignment="End"/>
+                <Label Text="Monto a Pagar" Grid.Row="10" HorizontalOptions="Center" HorizontalTextAlignment="Center"/>
+                <Entry Placeholder="$" Grid.Row="11" Keyboard="Numeric" x:Name="MontoF" Text="{Binding MontoF}" HorizontalTextAlignment="End"/>
+
+                <Button Text="Guardar" Grid.Row="12" VerticalOptions="EndAndExpand" CornerRadius="5" BackgroundColor="#A9B2EC" TextColor="White" Clicked="BtnAddprestamo"/>
+
+
+            </Grid>
+
+           
+        </Frame>
+        
+    </ContentPage.Content>
+</ContentPage>

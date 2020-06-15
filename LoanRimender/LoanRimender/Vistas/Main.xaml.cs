@@ -34,5 +34,10 @@ namespace LoanRimender.Vistas
         {
             Navigation.PushAsync(new NPass());
         }
+
+        private void Addprestamos(object sender, EventArgs e)
+        {
+            ((NavigationPage)this.Parent).PushAsync(new Addprestamo());
+        }
     }
 }
