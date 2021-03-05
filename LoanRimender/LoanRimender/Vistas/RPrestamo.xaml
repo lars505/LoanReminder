@@ -41,7 +41,7 @@
                 <Label Text="Monto a Pagar" Grid.Row="10" HorizontalOptions="Center" HorizontalTextAlignment="Center"/>
                 <Entry Placeholder="$" Grid.Row="11" Keyboard="Numeric" x:Name="MontoF" Text="{Binding MontoF}" HorizontalTextAlignment="End"/>
 
-                <Button Text="Guardar" Grid.Row="12" VerticalOptions="EndAndExpand" CornerRadius="5" BackgroundColor="#A9B2EC" TextColor="White" Clicked="BtnAddprestamo"/>
+                <Button Text="Guardar" Grid.Row="12" VerticalOptions="EndAndExpand" CornerRadius="5" BackgroundColor="#A9B2EC" TextColor="White" />
 
 
             </Grid>

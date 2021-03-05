@@ -45,21 +45,21 @@ namespace LoanRimender.Vistas
 
         }
        
-        async void BtnAddprestamo(object sender, EventArgs e)
-        {
-            var cliente = (Rimender)BindingContext;
-            cliente.debe = true;
-           cliente.FechaI = Convert.ToDateTime(startDatePicker.Date);
-           cliente.FechaF = Convert.ToDateTime(endDatePicker.Date);
-            //fechap.Text = fechai;
-            //DisplayAlert("mensaje", fechai, "ok");
-            cliente.MontoI = Convert.ToInt32(MontoI.Text);
-            cliente.MontoF = Convert.ToInt32(MontoF.Text);
+        //async void BtnAddprestamo(object sender, EventArgs e)
+        //{
+        //    var cliente = (Rimender)BindingContext;
+        //    cliente.debe = true;
+        //   cliente.FechaI = Convert.ToDateTime(startDatePicker.Date);
+        //   cliente.FechaF = Convert.ToDateTime(endDatePicker.Date);
+        //    //fechap.Text = fechai;
+        //    //DisplayAlert("mensaje", fechai, "ok");
+        //    cliente.MontoI = Convert.ToInt32(MontoI.Text);
+        //    cliente.MontoF = Convert.ToInt32(MontoF.Text);
 
-            await App.Database.SaveClienteAsync(cliente);
-            await Navigation.PopAsync();
+        //    await App.Database.SaveClienteAsync(cliente);
+        //    await Navigation.PopAsync();
 
-        }
+        //}
 
 
 

@@ -126,4 +126,9 @@
     <AndroidResource Include="Resources\drawable\calcular.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties XamarinHotReloadDebuggerTimeoutExceptionLoanRimenderAndroidHideInfoBar="True" XamarinHotReloadUnhandledDeviceExceptionLoanRimenderAndroidHideInfoBar="True" />
+    </VisualStudio>
+  </ProjectExtensions>
 </Project>

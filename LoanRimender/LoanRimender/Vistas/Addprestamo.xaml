@@ -6,98 +6,74 @@
              mc:Ignorable="d"
              x:Class="LoanRimender.Vistas.Addprestamo">
     
-    <!--New codigo list-->
+   
+    <ContentPage.Content >
 
-    <ListView  x:Name="listView" 
-          HasUnevenRows="true" BackgroundColor="#F5F5F5" ItemSelected="OnListViewItemSelected" SelectionMode="Single" SeparatorColor ="#F5F5F5" >
-        <ListView.ItemTemplate >
-            <DataTemplate >
-                <ViewCell >
 
-                    <Grid Padding="5" BackgroundColor="Transparent" >
+        <Frame  BackgroundColor="#F5F5F5">
+            <Frame CornerRadius="15" >
+                <ScrollView AbsoluteLayout.LayoutBounds="0,0,0,1"  VerticalScrollBarVisibility="Never" >
+                    <Grid RowSpacing="0" ColumnSpacing="50">
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="120" />
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="35"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="40"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="*"/>
+
+                            <RowDefinition/>
 
                         </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
 
-                        <Frame BackgroundColor="White" CornerRadius="15" Grid.Row="0" Grid.ColumnSpan="1" >
-                            <StackLayout>
-                                <Grid>
-
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="Auto"/>
-                                        <RowDefinition />
-                                        <RowDefinition />
-                                    </Grid.RowDefinitions>
-
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="200" />
-                                        <ColumnDefinition Width="0" />
-                                    </Grid.ColumnDefinitions>
-                                    <Label Grid.Column="0" BackgroundColor="Transparent" Text="{Binding Nombre}" FontAttributes="Bold" HorizontalOptions="Fill" FontSize="15" />
-                                    <Label Grid.Row="1" Grid.Column="0" Text="{Binding Cedula}" VerticalOptions="End" />
-                                    <Label Text="Deuda" Grid.Row="0" Grid.Column="2" HorizontalTextAlignment="End" BackgroundColor="Transparent" TextColor="red"/>
-                                    <Label Text="{Binding Direccion}" Grid.Row="2" Grid.Column="0"/>
-                                    <Label Text= "{Binding MontoF}" Grid.Row="1" Grid.Column="2" HorizontalTextAlignment="End" />
-                                </Grid>
-
-                            </StackLayout>
-
-                        </Frame>
-
-                    </Grid>
-                </ViewCell>
-            </DataTemplate>
-        </ListView.ItemTemplate>
-    </ListView>
+                        </Grid.ColumnDefinitions>
 
 
 
+                        <Label Text="Nombre:" x:Name="nombre" Grid.Row="0" Grid.Column="0"  Padding="5" />
+                        <StackLayout Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Padding="0" >
+                            <Picker Title="Seleccione un cliente"  TitleColor="Blue" ItemsSource="{Binding Rimender}" ItemDisplayBinding="{Binding Nombre}"  SelectedIndexChanged="SelectClieneOption" x:Name="PickerName" HeightRequest="50" WidthRequest="1"></Picker>
+                        </StackLayout >
 
-
-    <!--Coment after cod-->
-    <!--<ContentPage.Content>
-        <Grid RowSpacing="0" ColumnSpacing="50">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="1"/>
-                <RowDefinition/>
-                <RowDefinition Height="10"/>
-
-            </Grid.RowDefinitions>
-
-
-            <Frame Grid.Row="1" BackgroundColor="#F5F5F5" >
-
-                <Frame CornerRadius="25">
-                    <ScrollView AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All" Grid.Row="1">
-                        <StackLayout>
-                            <Label Text="Nombre:" x:Name="nombre" />
-
-                            <Picker Title="Seleccione un cliente" TitleColor="Blue" ItemsSource="{Binding Rimender}" ItemDisplayBinding="{Binding ID}"  SelectedIndexChanged="SelectClieneOption" x:Name="PickerName" HeightRequest="50" WidthRequest="1"></Picker>
-
-                            <Label Text="Fecha inicial del prestamo:" />
-
+                        <Label Text="Fecha inicial del prestamo:"  Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Padding="5"/>
+                        <StackLayout  Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" >
                             <DatePicker x:Name="startDatePicker" Format="dddd, dd MMMM yyyy" Margin="10, 0, 0, 30" DateSelected="OnDateSelected"  />
+                        </StackLayout>
 
-                            <Label Text="Finalización del prestamo:" x:Name="fin"/>
-
+                        <Label Text="Finalización del prestamo:" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" x:Name="fin" Padding="5"/>
+                        <StackLayout Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2">
                             <DatePicker x:Name="endDatePicker"  Format="dddd, dd MMMM yyyy" Margin="10, 0, 0, 30" IsEnabled="False" />
+                        </StackLayout>
 
-                            <Label Text="Monto a Prestar"/>
-                            <Entry Placeholder="$" Keyboard="Numeric"  TextChanged="Monto" x:Name="MontoI" Text="{Binding MontoF}" />
-                            <Label Text="Monto a Pagar"/>
-                            <Entry Placeholder="$" Keyboard="Numeric" x:Name="MontoF" Text="{Binding MontoF}" />
+                        <Label Text="Interes %" Grid.Row="6" Grid.Column="0" Padding="5"/>
+                        <Entry Placeholder="$" Grid.Row="7" Grid.Column="0" Keyboard="Numeric"  TextChanged="Monto" Text="{Binding porcentageinteres}" x:Name="porcentageinteres" />
+                        <Label Text="Interes a Pagar" Grid.Row="6" Grid.Column="1" Padding="5"/>
+                        <Entry Placeholder="$" Grid.Row="7" Grid.Column="1" Keyboard="Numeric"  Text="{Binding interes}" x:Name="interes" />
 
+                        <Label Text="Monto a Prestar" Grid.Row="8" Grid.Column="0" Padding="5"/>
+                        <Entry Placeholder="$" Grid.Row="9" Grid.Column="0" Keyboard="Numeric"  TextChanged="Monto" x:Name="MontoI" Text="{Binding MontoF}" />
+                        <Label Text="Monto a Pagar" Grid.Row="8" Grid.Column="1" Padding="5"/>
+                        <Entry Placeholder="$" Grid.Row="9" Grid.Column="1" Keyboard="Numeric" x:Name="MontoF" Text="{Binding MontoF}" />
+
+                        <StackLayout  Grid.Row="10" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="Black" VerticalOptions="EndAndExpand">
                             <Button Text="Guardar" VerticalOptions="EndAndExpand" CornerRadius="5" BackgroundColor="#A9B2EC" TextColor="White" Clicked="BtnAddprestamo"/>
                         </StackLayout>
-                    </ScrollView>
-                </Frame>
-
+                    </Grid>
+                </ScrollView>
             </Frame>
+        </Frame>
+    </ContentPage.Content>
 
-            <StackLayout Grid.Row="2"></StackLayout>
 
-        </Grid>
+    
 
-    </ContentPage.Content>-->
 </ContentPage>
